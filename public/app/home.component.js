@@ -25,8 +25,10 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1, context_
                 function HomeComponent(http) {
                     var _this = this;
                     this.http = http;
-                    this.http.get('http://localhost:3000/api')
-                        .subscribe(function (data) { return _this.message = data.json().some; }, function (err) { return console.log(err); });
+                    this.http.get('http://localhost:3000/posts/1.json')
+                        .subscribe(function (data) { 
+                            return _this.message = data.json().title; 
+                        }, function (err) { return console.log(err); });
                 }
                 HomeComponent = __decorate([
                     core_1.Component({
