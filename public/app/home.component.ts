@@ -8,7 +8,7 @@ import {Http, HTTP_PROVIDERS} from 'angular2/http';
 export class HomeComponent {
     message: string;
     constructor( public http: Http){
-        this.http.get('http://localhost:3000/api')
+        this.http.get('/api')
             .subscribe(
                 data => this.message = data.json().some,
                 err => console.log(err)
